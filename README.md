@@ -6,7 +6,7 @@ This is a sample project to demonstrate building an HTTP service discovery servi
 
 The [go_service](go_service) directory is a sample service that exposes metrics on a given port. 
 
-## http service discovery
+## Http Service Discovery
 
 The [http_service_discovery](http_service_discovery) directory is an example service that gets a list of services to scrape in a hardcoded way. Its returned by calling `GET /service-discovery`.
 
@@ -24,14 +24,14 @@ In a production environment logic would need to be added to find services in a d
 ]
 ```
 
-## compose
+## Compose
 The `compose.yaml` is a sample on how to run this in practice. It hard codes 2 metrics services and 1 http service discovery service. In practice, one would do the following:
 1. GET /service-discovery
 2. GET service-1/metrics, GET service-2/metrics, ...
 
 Where step 1 returns a list of targets to scrape then step 2 actually scrapes for metrics.
 
-## Running
+## Running the Example
 To run, do the following:
 ```
 ./build_binaries.sh
