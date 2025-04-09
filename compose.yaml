@@ -1,12 +1,12 @@
 services:
-  node1:
+  service-1:
     build:
       context: go_service
     environment:
       - PORT=9090
     ports:
       - "9090:9090"
-  node2:
+  service-2:
     build:
       context: go_service
     environment:
