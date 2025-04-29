@@ -13,16 +13,16 @@ type sdOutput struct {
 	Labels  map[string]string `json:"labels"`
 }
 
-func getNodes() sdOutput {
+func getNodes() []sdOutput {
 	// here is where the logic could go for service discovery
 	// for example if you have a list of ec2 instances you may
 	// query them by tag and return them here
-	return sdOutput{
+	return []sdOutput{{
 		[]string{"localhost:9090", "localhost:9091"},
 		map[string]string{
 			"host": "localhost",
 		},
-	}
+	}}
 }
 
 func serviceDiscoveryHandler(w http.ResponseWriter, r *http.Request) {
