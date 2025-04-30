@@ -18,9 +18,16 @@ func getNodes() []sdOutput {
 	// for example if you have a list of ec2 instances you may
 	// query them by tag and return them here
 	return []sdOutput{{
-		[]string{"localhost:9090", "localhost:9091"},
+		[]string{"localhost:9090"},
 		map[string]string{
 			"host": "localhost",
+			"port": "9090",
+		},
+	}, {
+		[]string{"localhost:9091"},
+		map[string]string{
+			"host": "localhost",
+			"port": "9091",
 		},
 	}}
 }
