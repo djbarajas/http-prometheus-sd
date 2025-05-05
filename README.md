@@ -45,16 +45,17 @@ $ curl localhost:9000/service-discovery | jq
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    78  100    78    0     0  26748      0 --:--:-- --:--:-- --:--:-- 39000
-{
-  "targets": [
-    "localhost:9090",
-    "localhost:9091"
-  ],
-  "labels": {
-    "host": "localhost"
-  }
-}
-
+[
+    {
+      "targets": [
+        "localhost:9090",
+        "localhost:9091"
+      ],
+      "labels": {
+        "host": "localhost"
+      }
+    }
+]
 # scrape a target retrieved from above
 $ curl localhost:9090/metrics
 # HELP promhttp_metric_handler_requests_total Total number of scrapes by HTTP status code.
